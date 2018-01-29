@@ -1,0 +1,20 @@
+<header class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io" target="_blank">
+        <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+      </a>
+      <span class="navbar-burger burger" data-target="navbarMenuHeroC" [class.is-active]="burgerSwitch" (click)="toggleBurger()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+    <div id="navbarMenuHeroC" class="navbar-menu" [class.is-active]="burgerSwitch">
+      <div class="navbar-start">
+        <a class="navbar-item" routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact : true }">Home</a>
+        <a class="navbar-item" routerLink="/about" routerLinkActive="is-active">About</a>
+      </div>
+    </div>
+  </div>
+</header>
