@@ -18,6 +18,7 @@ This application uses the LastFM API to search artists and display brief demogra
 1. Update the `LastFM API Key`
     * Obtain a free API key from LastFM [here](https://www.last.fm/api)
     * Go to `lastfm.service.ts` and save your API Key into the file
+
         ```typescript
         export class LastfmService {
 
@@ -29,6 +30,7 @@ This application uses the LastFM API to search artists and display brief demogra
 
 ## Deploying to Heroku
 1. Modify the `start` and `postinstall` scripts in `package.json` to:
+
     ```json
     "scripts": {
         "ng": "ng",
@@ -41,6 +43,7 @@ This application uses the LastFM API to search artists and display brief demogra
     },
     ```
 2. Move the following dependecies from `devDependencies` to `dependencies` in `package.json`:
+
     ```json
     "dependencies": {
         ...
