@@ -18,13 +18,13 @@ This application uses the LastFM API to search artists and display brief demogra
 1. Update the `LastFM API Key`
     * Obtain a free API key from LastFM [here](https://www.last.fm/api)
     * Go to `lastfm.service.ts` and save your API Key into the file
-    ```typescript
-    export class LastfmService {
+        ```typescript
+        export class LastfmService {
 
-        API_KEY = <your-lastFM-API-key-goes-here>
+            API_KEY = <your-lastFM-API-key-goes-here>
 
-        constructor(private http: HttpClient) { }
-    ```
+            constructor(private http: HttpClient) { }
+        ```
 1. Run `ng serve`, and navigate to `http://localhost:4200/`
 
 ## Deploying to Heroku
