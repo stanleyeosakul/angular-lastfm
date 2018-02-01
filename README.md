@@ -2,7 +2,7 @@
 This application uses the LastFM API to search musical artists and the TheMovieDB API to search movies to display basic demographical information.  It was developed using **Angular 5**, makes calls to the [LastFM API](https://www.last.fm/api) and the [TheMovieDB API](https://developers.themoviedb.org/3/getting-started/introduction), and styled using the [Bulma CSS Framework](https://bulma.io).
 
 <p align="center">
-    <img width="500" height="281" src="./src/assets/images/homepage.png"><br>
+    <img width="500" height="292" src="./src/assets/images/homepage.png"><br>
     <a href="http://nglastfm.herokuapp.com/" target="_blank">ngLastFM App</a>
 </p>
 
