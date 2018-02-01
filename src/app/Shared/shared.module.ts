@@ -5,7 +5,8 @@ import { RouterModule } from '@angular/router';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
-import { LastfmService } from './services/lastfm.service';
+import { ApiService } from './services/api.service';
+import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 
 @NgModule({
   imports: [
@@ -15,14 +16,16 @@ import { LastfmService } from './services/lastfm.service';
   ],
   declarations: [
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    SearchMovieComponent
   ],
   exports: [
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    SearchMovieComponent
   ],
   providers: [
-    LastfmService
+    ApiService
   ]
 })
 export class SharedModule { }

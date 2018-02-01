@@ -1,5 +1,5 @@
-# ngLastFM App
-This application uses the LastFM API to search artists and display brief demographic information as well as their top 5 songs.  This project was originally started using the video series [Angular 2 Spotify App](https://www.youtube.com/watch?v=f6SrTZwZi70&list=PLillGF-RfqbYmJsLiPDVoDea3lfy7-E8O) by *Brad Traversy*.  However, the Spotify API now requires authorization and due to this added complexity, this API was abandoned in favor of LastFM's API which is free and easy-to-use.  As the original app was created in 2016 using the Spotify app and Angular 2 RC4, this project has undergone major revisions as it was developed using **Angular 5**, makes calls to the [LastFM API](https://www.last.fm/api), and styled using the [Bulma CSS Framework](https://bulma.io).
+# ngLastFM App - Search for Music and Movies!
+This application uses the LastFM API to search musical artists and the TheMovieDB API to search movies to display basic demographical information.  It was developed using **Angular 5**, makes calls to the [LastFM API](https://www.last.fm/api) and the [TheMovieDB API](https://developers.themoviedb.org/3/getting-started/introduction), and styled using the [Bulma CSS Framework](https://bulma.io).
 
 <p align="center">
     <img width="500" height="281" src="./src/assets/images/homepage.png"><br>
@@ -7,8 +7,8 @@ This application uses the LastFM API to search artists and display brief demogra
 </p>
 
 ## Versions
-* [Angular CLI](https://github.com/angular/angular-cli) v1.6.6
-* Angular v5.2.2
+* [Angular CLI](https://github.com/angular/angular-cli) v1.6.7
+* Angular v5.2.3
 * [Bulma](https://bulma.io) v0.6.2
 
 ## Installation
@@ -17,12 +17,14 @@ This application uses the LastFM API to search artists and display brief demogra
 1. Run `yarn install` to install dependencies
 1. Update the `LastFM API Key`
     * Obtain a free API key from LastFM [here](https://www.last.fm/api)
-    * Go to `lastfm.service.ts` and save your API Key into the file
+    * Obtain a free API key from TheMovieDB [here](https://www.themoviedb.org)
+    * Go to `api.service.ts` and save your API keys into the file
 
         ```typescript
         export class LastfmService {
 
-            API_KEY = <your-lastFM-API-key-goes-here>
+            API_KEY_LASTFM = <your-lastFM-API-key-goes-here>
+            API_KEY_THEMOVIEDB = <your-TheMovieDB-API-key-goes-here>
 
             constructor(private http: HttpClient) { }
         ```

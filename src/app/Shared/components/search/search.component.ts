@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LastfmService } from '../../services/lastfm.service';
+import { ApiService } from '../../services/api.service';
 import { Artist } from '../../models/Artist';
 import { Track } from '../../models/Track';
 
@@ -30,11 +30,11 @@ export class SearchComponent {
     { name: '', url: '', rank: 5, listeners: 0 },
   ];
 
-  constructor(private lastfmService: LastfmService) { }
+  constructor(private apiService: ApiService) { }
 
   searchMusic() {
     this.searchResult = true;
-    this.lastfmService.search(this.searchStr, 'getinfo').subscribe((res: any) => {
+    this.apiService.searchMusic(this.searchStr, 'getinfo').subscribe((res: any) => {
       this.artist.name = res.artist.name;
       this.artist.image = res.artist.image[2]['#text'];
       this.artist.listeners = res.artist.stats.listeners;
@@ -43,7 +43,7 @@ export class SearchComponent {
       this.artist.url = res.artist.url;
     });
 
-    this.lastfmService.search(this.searchStr, 'gettoptracks').subscribe((res: any) => {
+    this.apiService.searchMusic(this.searchStr, 'gettoptracks').subscribe((res: any) => {
         this.tracks[0].name = res.toptracks.track[0].name;
         this.tracks[0].url = res.toptracks.track[0].url;
         this.tracks[0].listeners = res.toptracks.track[0].listeners;
