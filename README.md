@@ -41,7 +41,7 @@ This application uses the LastFM API to search musical artists and the TheMovieD
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "postinstall": "ng build --prod && ng build --prod --app universal --output-hashing=none"
+        "postinstall": "ng build --prod"
     },
     ```
 2. Move the following dependecies from `devDependencies` to `dependencies` in `package.json`:
