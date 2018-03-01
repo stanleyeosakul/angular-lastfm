@@ -3,7 +3,6 @@ This application uses the LastFM API to search musical artists and the TheMovieD
 
 <p align="center">
     <img width="500" height="292" src="./src/assets/images/homepage.png"><br>
-    <a href="http://nglastfm.herokuapp.com/" target="_blank">ngLastFM App</a>
 </p>
 
 ## Versions
